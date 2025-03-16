@@ -1,0 +1,129 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+#simulation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+canvas {
+    background: radial-gradient(circle, #0f3460, #1a1a2e);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 4 / 3;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.slider-container {
+    background: #1f4068;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 300px;
+}
+
+.slider-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.slider-container input[type="range"] {
+    width: 100%;
+}
+
+.slider-container span {
+    margin-left: 10px;
+}
+
+#tools {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background: #16213e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+#tools h3 {
+    margin: 0 0 10px 0;
+}
+
+#stopwatch {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4e73df;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #2e59d9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #simulation-container {
+        flex-direction: column;
+    }
+
+    #tools {
+        width: 100%;
+    }
+
+    canvas {
+        width: 95%;
+    }
+
+    .slider-container {
+        width: 90%;
+    }
+}
